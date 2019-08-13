@@ -1,0 +1,8 @@
+USE [master]
+GO  
+ALTER DATABASE [spike-db] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [spike-db]
+GO
