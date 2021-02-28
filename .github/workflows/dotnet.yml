@@ -33,7 +33,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: sbom
-        path: ./src/bom.json
+        path: ./**/bom.json
       
       
       
