@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: [ '2.2.103', '3.0', '3.1.x' ]
+        dotnet-version: [ '3.1.x' ]
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -25,8 +25,6 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
       working-directory: ./src 
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
     - name: CycloneDX .NET Generate SBOM
       uses: CycloneDX/gh-dotnet-generate-sbom@v1.0.1
       with:
